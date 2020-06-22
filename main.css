@@ -63,7 +63,7 @@ a {
   overflow: visible;
 }
 .rotate-animation {
-  animation: 0.7s ease-in-out rotate;
+  animation: 0.6s ease-in-out rotate;
   animation-fill-mode: forwards;
 }
 
@@ -136,6 +136,16 @@ a {
 .headshot {
   max-width: 300px;
   border-radius: 5px;
+}
+.emoji-img {
+  display: inline-block !important;
+  border: none !important;
+  height: 1em !important;
+  width: 1em !important;
+  position: relative;
+  vertical-align: -0.1em !important;
+  background: none !important;
+  padding: 0 !important;
 }
 
 .github:hover {
