@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: "Muli", sans-serif;
   box-sizing: border-box;
@@ -48,10 +53,8 @@ a {
 }
 .content {
   margin: 75px auto;
-  padding: 0px 30px;
 }
 .logoImage {
-  /* adjust when have logo, add hover effect*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,16 +70,89 @@ a {
   animation-fill-mode: forwards;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg) translateY(0) translateX(0) scale(1);
-  }
-  40% {
-    transform: rotate(-51deg) scale(1.05) translateY(4px) translateX(-15px);
-  }
-  100% {
-    transform: rotate(-47deg) translateY(6px) translateX(-15.5px) scaleX(0.9);
-  }
+.projectImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 10px 10px 0 0;
+}
+.projectCard {
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  border-color: rgba(153, 153, 153, 0.3);
+  border-width: 1px;
+  border-radius: 10px;
+  position: relative;
+  margin: 0 auto 4em auto;
+  width: 90%;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.projectCard:hover {
+  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+.projectCard:hover > a > figure > img {
+  transform: scale(1.05);
+}
+.projectCard:hover .projectCardHeadline {
+  color: tomato;
+}
+.projectCard:hover .projectCardHeadline:after {
+  display: block;
+}
+.projectCardBottom {
+  position: relative;
+  padding: 0 2em 2em 2em;
+}
+.projectCardBioWrapper {
+  max-width: 40%;
+  position: relative;
+  left: 0;
+  float: left;
+  margin: 0;
+}
+.projectCardHeadline {
+  margin-top: 0.5em;
+  text-decoration: none;
+  position: relative;
+}
+.projectCardHeadline:after {
+  display: none;
+  content: "";
+  position: absolute;
+  height: 3px;
+  left: 0em;
+  width: 100%;
+  background-color: tomato;
+  bottom: -5px;
+}
+.inline-block {
+  display: inline-block;
+}
+.projectCardBio {
+  margin: 0;
+}
+.projectCardBioBottom {
+  margin-top: 0.5em;
+}
+.role {
+  display: inline-block;
+  border-radius: 5px;
+  background: #f5f5f5;
+  padding: 0.3em 0.5em;
+  margin-top: 1em;
+}
+figure {
+  overflow: hidden;
+}
+
+a:hover {
+  color: tomato;
+}
+.projectContainer {
+  margin-bottom: 8em;
 }
 
 .introWrapper {
@@ -161,12 +237,8 @@ a {
   padding: 0 !important;
 }
 
-.github:hover {
-  fill: tomato;
-}
-.linkedin:hover {
-  fill: tomato;
-}
+.github:hover,
+.linkedin:hover,
 .email:hover {
   fill: tomato;
 }
@@ -241,5 +313,17 @@ a {
   }
   .introHeading {
     font-size: 5vw;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translateY(0) translateX(0) scale(1);
+  }
+  40% {
+    transform: rotate(-51deg) scale(1.05) translateY(4px) translateX(-15px);
+  }
+  100% {
+    transform: rotate(-47deg) translateY(6px) translateX(-15.5px) scaleX(0.9);
   }
 }
