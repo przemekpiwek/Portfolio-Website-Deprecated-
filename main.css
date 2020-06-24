@@ -282,6 +282,15 @@ figure {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.skillsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#brain-icon {
+  max-width: 250px;
+  margin-right: 200px;
+}
 .footer-wrapper {
   width: 100%;
   display: flex;
