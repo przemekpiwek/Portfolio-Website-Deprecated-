@@ -1,3 +1,16 @@
+import "./styles/main.css";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".box", {
+  scrollTrigger: ".box",
+  x: 500,
+});
+
 const logoImage = document.querySelector(".logoImage");
 const logoP = document.querySelector(".logo-p");
 const logoBorders = document.querySelector(".logo-borders");
